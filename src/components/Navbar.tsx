@@ -3,6 +3,7 @@ import React from "react";
 import { User } from "lucide-react";
 import { House } from "lucide-react";
 import { ShoppingBasket } from "lucide-react";
+import { Link } from "react-router-dom";
 export default function Navbar() {
   const [isNavClicked, setIsNavClicked] = React.useState(true);
   const handleNavClick = () => {
@@ -33,27 +34,38 @@ export default function Navbar() {
           {/* OverLay taking whole screen and another div inside it !!*/}
           <div className="absolute z-10 right-0 w-40 h-fit  flex flex-col items-end justify-end pt-2 gap-2 bg-black/30 shadow-lg shadow-violet-500/50 rounded-l-2xl p-1">
             <X className="text-white mr-2 mt-2 " onClick={handleNavClick} />
-            <div className="flex-row items-center justify-start gap-6 flex w-full ml-2.5">
-              <House className=" size-7 text-violet-500" />
-              <h1 className="text-violet-500 text-2xl ">Home</h1>
-            </div>
-            <div className="flex-row items-center justify-start gap-6 flex w-full  ml-2.5">
-              <ShoppingBasket className=" size-7 text-violet-500" />
-              <h1 className="text-violet-500 text-2xl ">Products</h1>
-            </div>
-            <div className="flex-row items-center justify-start gap-6 flex w-full  ml-2.5">
-              <ShieldAlert className=" size-7 text-violet-500" />
-              <h1 className="text-violet-500 text-2xl ">About</h1>
-            </div>
-            <div className="flex-row items-center justify-start gap-6 flex w-full  ml-2.5">
-              <Signature className=" size-7 text-violet-500" />
-              <h1 className="text-violet-500 text-2xl ">Contact</h1>
-            </div>
+            <Link to="/MainPage" className="w-full mr-2.5">
+              <div className="flex-row items-center justify-start gap-6 flex w-full ml-2.5">
+                <House className=" size-7 text-violet-500" />
+                <h1 className="text-violet-500 text-2xl ">Home</h1>
+              </div>
+            </Link>
+            <Link to="/ShopPage" className="w-full mr-2.5">
+              <div className="flex-row items-center justify-start gap-6 flex w-full  ml-2.5">
+                <ShoppingBasket className=" size-7 text-violet-500" />
+                <h1 className="text-violet-500 text-2xl ">Products</h1>
+              </div>
+            </Link>
+            <Link to="/ShopPage" className="w-full mr-2.5">
+              <div className="flex-row items-center justify-start gap-6 flex w-full  ml-2.5">
+                <ShieldAlert className=" size-7 text-violet-500" />
+                <h1 className="text-violet-500 text-2xl ">About</h1>
+              </div>
+            </Link>
+            <Link to="/ShopPage" className="w-full mr-2.5">
+              <div className="flex-row items-center justify-start gap-6 flex w-full  ml-2.5">
+                <Signature className=" size-7 text-violet-500" />
+                <h1 className="text-violet-500 text-2xl ">Contact</h1>
+              </div>
+            </Link>
             <hr className="custom-hr rounded-4xl h-full w-full" />
-            <div className="flex-row items-center justify-start gap-6 flex w-full  ml-2.5">
-              <User className=" size-7 text-violet-500" />
-              <h1 className="text-violet-500 text-2xl ">Account</h1>
-            </div>
+            <Link to="/ShopPage" className="w-full mr-2.5">
+              {" "}
+              <div className="flex-row items-center justify-start gap-6 flex w-full  ml-2.5">
+                <User className=" size-7 text-violet-500" />
+                <h1 className="text-violet-500 text-2xl ">Account</h1>
+              </div>
+            </Link>
           </div>
         </div>
       )}

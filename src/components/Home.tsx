@@ -6,7 +6,7 @@ import ARIMG from "../assets/ARIMG.png";
 import About from "./About";
 export default function Home() {
   return (
-    <div className="bg-black h-auto w-fit pt-25 ">
+    <div className="bg-black h-auto w-full pt-25 ">
       <div className="flex flex-col items-center justify-center mt-10 gap-2">
         <h1 className="text-white text-3xl font-bold">Boosting Your</h1>
         <h1 className="text-violet-500  font-bold text-3xl z-10 mask-x-from-32 bg-purple-500/40 text-center p-1 rounded-md w-75">
