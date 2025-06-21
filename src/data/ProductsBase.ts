@@ -121,8 +121,9 @@ export const ProductsBase: (ProductCardType & { key: string })[] = [
     Xbox: false,
     Playstation: true,
     PC: false,
-  },{
-    key: "",
+  },
+  {
+    key: "gaming-tech-pc",
     img: "https://cdn.shopify.com/s/files/1/0102/8426/9615/products/wraith-esports-hoverpad-v2-skates-razer-viper-v2-pro_360x.jpg?v=1716279789",
     price: 6.99,
     title: "Wraith Esports Hoverpad v2 (Skates) - Razer Viper V2 Pro",
@@ -135,8 +136,9 @@ export const ProductsBase: (ProductCardType & { key: string })[] = [
     Xbox: false,
     Playstation: false,
     PC: true,
-  },{
-    key: "",
+  },
+  {
+    key: "gaming-tech-pc",
     img: "https://cdn.shopify.com/s/files/1/0102/8426/9615/products/6_10e6857b-24a8-4243-92fd-baec3fb32a76_360x.jpg?v=1619877652",
     price: 74.99,
     title: "*OPEN BOX* Ducky MIYA Pro Backlit 65% Mechanical Keyboard - Cherry MX Red",
@@ -149,8 +151,9 @@ export const ProductsBase: (ProductCardType & { key: string })[] = [
     Xbox: false,
     Playstation: false,
     PC: true,
-  },{
-    key: "",
+  },
+  {
+    key: "gaming-discount-tech-pc",
     img: "https://cdn.shopify.com/s/files/1/0102/8426/9615/files/razer-viper-v3-pro-wireless-gaming-mouse-faker-edition-uk-rz01-05120500-r3m1_360x.png?v=1742886591",
     price: 174.99,
     title: "Razer Viper V3 Pro Wireless Gaming Mouse - Faker Edition",
@@ -163,8 +166,9 @@ export const ProductsBase: (ProductCardType & { key: string })[] = [
     Xbox: false,
     Playstation: false,
     PC: true,
-  },{
-    key: "",
+  },
+  {
+    key: "gaming-pc",
     img: "https://cdn.shopify.com/s/files/1/0102/8426/9615/products/gpro-blackpurple_360x.jpg?v=1634907436",
     price: 9.39,
     title: "BT.L v3 Black Purple Mouse Grip - Logitech G Pro Wireless",
@@ -177,8 +181,9 @@ export const ProductsBase: (ProductCardType & { key: string })[] = [
     Xbox: false,
     Playstation: false,
     PC: true,
-  },{
-    key: "",
+  },
+  {
+    key: "gaming-tech-xbox-pc",
     img: "https://cdn.shopify.com/s/files/1/0102/8426/9615/files/asus-rog-raikiri-pro-wireless-gaming-controller-for-xbox-uk-90gc00w0-bgp000_360x.png?v=1719477904",
     price: 159.99,
     title: "Asus ROG Raikiri Pro for Xbox Wireless Gaming Controller",
@@ -191,8 +196,9 @@ export const ProductsBase: (ProductCardType & { key: string })[] = [
     Xbox: true,
     Playstation: false,
     PC: true,
-  },{
-    key: "",
+  },
+  {
+    key: "gaming-ai-tech-nitendo-xbox-playstation-pc",
     img: "https://cdn.shopify.com/s/files/1/0102/8426/9615/files/asus-rog-carnyx-rgb-usb-gaming-microphone-uk-90yh03z0-baua00_360x.png?v=1723192250",
     price: 179.99,
     title: "Asus ROG Carnyx USB Gaming Microphone",
@@ -205,8 +211,9 @@ export const ProductsBase: (ProductCardType & { key: string })[] = [
     Xbox: true,
     Playstation: true,
     PC: true,
-  },{
-    key: "",
+  },
+  {
+    key: "gaming-discount-tech-nitendo-xbox-playstation-pc",
     img: "http://cdn.shopify.com/s/files/1/0102/8426/9615/files/razer-kraken-kitty-v2-wired-rgb-gaming-headset_2_360x.png?v=1750137166",
     price: 93.99,
     title: "Razer Kraken Kitty V2 Wired RGB Gaming Headset - Quartz",
@@ -219,8 +226,9 @@ export const ProductsBase: (ProductCardType & { key: string })[] = [
     Xbox: true,
     Playstation: true,
     PC: true,
-  },{
-    key: "",
+  },
+  {
+    key: "gaming-ai-tech-pc",
     img: "http://cdn.shopify.com/s/files/1/0102/8426/9615/files/razer-kraken-v4-pro-wireless-rgb-gaming-headset-uk-rz04-05160100-r3m1_360x.png?v=1726738807",
     price: 379.99,
     title: "Razer Kraken V4 Pro Wireless RGB Gaming Headset",
