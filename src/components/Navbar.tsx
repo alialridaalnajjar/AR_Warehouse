@@ -15,7 +15,7 @@ export default function Navbar() {
   return (
     <>
       {isNavClicked ? (
-        <div className="fixed w-full bg-black">
+        <div className="fixed w-full bg-black z-50">
           <div className="flex flex-row items-center justify-between w-full p-7 gap-5 h-fit">
             <h1 className="text-violet-500 font-extrabold text-xl">
               AR Warehouse
