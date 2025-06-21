@@ -4,13 +4,11 @@ import Navbar from "../components/Navbar";
 import { itemsCollection } from "../data/ItemsCollection";
 export default function MainPage() {
   return (
-    <div className="bg-blue-900 h-screen">
-     
-        <Navbar />
-      
+    <div className="bg-black h-auto ">
+      <Navbar />
       <Home />
-      <ItemsSection itemsCollection={itemsCollection} />
-      <div></div>
+      <ItemsSection itemsCollection={itemsCollection}  />
+      <div>fgdsa</div>
     </div>
   );
 }

@@ -1,6 +1,6 @@
 export default function About() {
   return (
-    <div>
+    <div >
       <div className="flex flex-row items-center justify-center ">
         <h1 className="text-white mt-10 text-3xl font-semibold">
           What <span className="text-violet-400">Is</span> AR
@@ -12,13 +12,7 @@ export default function About() {
         fueling your passion for gaming and elevating your competitive play
       </h1>
 
-      <div>2</div>
-      <div>2</div>
-      <div>2</div>
-      <div>2</div>
-      <div>2</div>
-      <div>2</div>
-      <div>2</div>
+      
     </div>
   );
 }

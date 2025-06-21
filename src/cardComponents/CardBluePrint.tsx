@@ -1,6 +1,5 @@
-import React from "react";
+import Discounts from "../customIconsComponents/Discounts";
 import type { ProductCardType } from "../types/productCardType";
-
 export default function cardBluePrint({
   img,
   price,
@@ -17,7 +16,9 @@ export default function cardBluePrint({
 }: ProductCardType) {
   return (
     <div className="flex flex-col items-start gap-1.5 mx-auto">
-      <img src={img} className="object-cover rounded-2xl size-90 p-1" />
+      <div className="relative">
+      {discount ? <Discounts/> : null}
+      <img src={img} className="object-cover rounded-2xl size-90 p-1" /></div>
       <div className="flex flex-row gap-3 items-start justify-start ml-1 flex-wrap max-w-85">
         <div className="bg-teal-800 text-green-400 rounded-2xl   p-1 text-xs font-bold ">${price}</div>
         {Gaming ? <div className="bg-purple-800 text-violet-500/90 rounded-2xl   p-1 text-xs font-bold ">Gaming</div> : null}
