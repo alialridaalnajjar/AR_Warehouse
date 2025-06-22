@@ -1,6 +1,6 @@
 import About from "../components/About";
 import Navbar from "../components/Navbar";
-import ARIMG from "../assets/arimg.png"; // Adjust the path and filename as needed
+import ARIMG from "../assets/ARIMG.png"; // Adjust the path and filename as needed
 
 export default function AboutPage() {
   return (
