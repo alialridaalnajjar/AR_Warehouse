@@ -1,7 +1,7 @@
 import { Search, SlidersHorizontal } from "lucide-react";
 import { useState } from "react";
 import type { searchType } from "../types/productCardType";
-import FilterBar from "../HrComponents/filterBar";
+import FilterBar from "../HrComponents/FilterBar";
 
 export default function SearchBar({ search, setSearch }: searchType) {
   const [showFilters, setShowFilters] = useState(false);
