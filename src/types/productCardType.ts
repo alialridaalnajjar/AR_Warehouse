@@ -13,3 +13,9 @@ export type ProductCardType = {
     Gaming?:boolean;
     key?: string; // Optional key for React lists
 }
+
+export type searchType={
+    search:string;
+    setSearch:React.Dispatch<React.SetStateAction<string>>;
+    handleSearch?: () => void; // Optional function for handling search
+}

@@ -18,9 +18,10 @@ export default function Navbar() {
       {isNavClicked ? (
         <div className="fixed w-full bg-black z-50">
           <div className="flex flex-row items-center justify-between w-full p-7 gap-5 h-fit">
+            <Link to="/MainPage" >
             <h1 className="text-violet-500 font-extrabold text-xl">
               AR Warehouse
-            </h1>
+            </h1></Link>
             <ShoppingCart className="ml-auto size-10 text-violet-500 border-1 border-violet-500 p-2 rounded-md font-extrabold" />
             <Menu
               className="size-10 text-violet-500"

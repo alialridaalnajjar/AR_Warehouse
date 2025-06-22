@@ -2,7 +2,7 @@ import type { ProductCardType } from "../types/productCardType";
 
 export const itemsCollection: (ProductCardType & { key: string })[] = [
   {
-    key: "discount-tech-pc-gaming",
+    key: "discount-tech-pc-gaming-1",
     img: "https://esportsgear.uk/cdn/shop/files/razer-blackwidow-v4-x-minecraft-edition-us-ansi-rgb-gaming-keyboard-razer-green-switches-uk-rz03-04704100-r3m1_400x.png?v=1742981781",
     price: 149.99,
     title:
@@ -18,7 +18,7 @@ export const itemsCollection: (ProductCardType & { key: string })[] = [
     Gaming: true,
   },
   {
-    key: "gaming-discount-tech-nitendo-xbox-playstation-pc",
+    key: "gaming-discount-tech-nitendo-xbox-playstation-pc-2",
     img: "https://esportsgear.uk/cdn/shop/files/steelseries-arctis-nova-5p-for-playstation-wireless-headset-white-uk-61674_2_800x.png?v=1745312790",
     price: 119.99,
     title: "SteelSeries Arctis Nova 5P for Playstation Wireless Headset - White",
@@ -33,7 +33,7 @@ export const itemsCollection: (ProductCardType & { key: string })[] = [
     PC: true,
   },
   {
-    key: "gaming-tech-xbox-playstation-pc",
+    key: "gaming-tech-xbox-playstation-pc-3",
     img: "https://esportsgear.uk/cdn/shop/files/ducky-one-3-classic-black-mini-rgb-keyboard_1_cda323e6-fb63-4ba5-989c-de34e74d17d1_800x.png?v=1711698857",
     price: 104.99,
     title: "Ducky One 3 Classic Black Mini RGB Mechanical Keyboard - Cherry MX Red",
@@ -48,7 +48,7 @@ export const itemsCollection: (ProductCardType & { key: string })[] = [
     PC: true,
   },
   {
-    key: "tech-pc-gaming",
+    key: "tech-pc-gaming-4",
     img: "https://esportsgear.uk/cdn/shop/files/scyrox-v8-8k-36g-optical-wireless-gaming-mouse-yellow-uk-scyrox-v8-yw_400x.png?v=1748489990",
     price: 64,
     title: "Scyrox V8 8K 36g Optical Wireless Gaming Mouse - Yellow",
@@ -63,7 +63,7 @@ export const itemsCollection: (ProductCardType & { key: string })[] = [
     Gaming: true,
   },
   {
-    key: "gaming-tech-pc",
+    key: "gaming-tech-pc-5",
     img: "http://esportsgear.uk/cdn/shop/files/esptiger-pioneer-wuxiang-v2-gaming-mousepad-uk-mp-et-pioneer-wuxiang_800x.png?v=1736316981",
     price: 32.99,
     title: "EspTiger Pioneer Wu Xiang V2 Gaming Mousepad",
@@ -78,7 +78,7 @@ export const itemsCollection: (ProductCardType & { key: string })[] = [
     PC: true,
   },
   {
-    key: "gaming-nitendo-xbox-playstation-pc",
+    key: "gaming-nitendo-xbox-playstation-pc-6",
     img: "https://cdn.shopify.com/s/files/1/0102/8426/9615/files/pulsar-es-palm-short-arm-sleeve-medium-uk-plsr-es-asp-short-m-l_4_138f8064-dad8-4394-9674-9fae32cb0d7b_360x.png?v=1690867467",
     price: 16.99,
     title: "Pulsar ES Palm Short Gaming Sleeve - Medium",
@@ -93,7 +93,7 @@ export const itemsCollection: (ProductCardType & { key: string })[] = [
     PC: true,
   },
   {
-    key: "gaming-gfuel",
+    key: "gaming-gfuel-7",
     img: "https://m.media-amazon.com/images/I/51WnEmE2QlL._SX300_SY300_QL70_FMwebp_.jpg",
     price: 28.50,
     title: "G Fuel Energy Drink, Apple Mango, Sugar Free Beverage with 300mg Caffeine, 16 oz Cans (Crash Bandicoot, 12-Pack)",
@@ -108,7 +108,7 @@ export const itemsCollection: (ProductCardType & { key: string })[] = [
     PC: false,
   },
   {
-    key: "gaming-discount-tech-playstation",
+    key: "gaming-discount-tech-playstation-8",
     img: "https://m.media-amazon.com/images/I/41TnqQ0prBL._SX300_SY300_QL70_FMwebp_.jpg",
     price: 499.99,
     title: "PlayStation 5 Console (PS5)",
