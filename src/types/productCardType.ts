@@ -11,7 +11,8 @@ export type ProductCardType = {
   Playstation?: boolean;
   PC?: boolean;
   Gaming?: boolean;
-  key?: string; // Optional key for React lists
+  key?: string; 
+ 
 };
 
 export type searchType = {

@@ -1,8 +1,8 @@
 import Lottie from "lottie-react";
-import gameI from "../assets/GameICON.json";
-import pressMe from "../assets/pressMe.json";
 import { Link } from "react-router-dom";
 import ARIMG from "../assets/ARIMG.png";
+import gameI from "../assets/GameICON.json";
+import pressMe from "../assets/pressMe.json";
 import About from "./About";
 export default function Home() {
   return (

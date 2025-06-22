@@ -1,3 +1,4 @@
+import ts from "../assets/output-onlinepngtools.png";
 import Discounts from "../customIconsComponents/Discounts";
 import type { ProductCardType } from "../types/productCardType";
 export default function ShopCard({
@@ -12,24 +13,70 @@ export default function ShopCard({
   Xbox,
   Playstation,
   PC,
-  Gaming
+  Gaming,
 }: ProductCardType) {
   return (
     <div className="flex flex-col items-start gap-1.5 mx-auto">
       <div className="relative">
-      {discount ? <Discounts/> : null}
-      <img src={img} className="object-cover rounded-2xl size-48 p-1" /></div>
-      <div className="flex flex-row gap-3 items-start justify-start ml-1 flex-wrap max-w-45">
-        <div className="bg-teal-800 text-green-400 rounded-2xl   p-1 text-xs font-bold ">${price}</div>
-        {Gaming ? <div className="bg-purple-800 text-violet-500/90 rounded-2xl   p-1 text-xs font-bold ">Gaming</div> : null}
-        {discount ? <div className="bg-amber-700 text-amber-400 rounded-2xl   p-1 text-xs font-bold ">Discount</div> : null}
-        {Tech ? <div className="bg-blue-800 text-blue-400 rounded-2xl   p-1 text-xs font-bold ">Tech</div> : null} {PC ? <div className="bg-cyan-800 text-cyan-400 rounded-2xl   p-1 text-xs font-bold ">PC/Parts</div> : null}
-        {Nitendo ? <div className="bg-blue-800 text-red-800 rounded-2xl   p-1 text-xs font-bold ">Nitendo</div> : null}
-        {Gfuel ? <div className="bg-teal-800 text-green-400 rounded-2xl   p-1 text-xs font-bold ">Gfuel</div> : null} {Ai ? <div className="bg-teal-800 text-green-400 rounded-2xl   p-1 text-xs font-bold ">Ai</div> : null}
-        {Xbox ? <div className="bg-teal-800 text-green-400 rounded-2xl   p-1 text-xs font-bold ">Xbox</div> : null}
-        {Playstation ? <div className="bg-teal-800 text-green-400 rounded-2xl   p-1 text-xs font-bold ">Playstation</div> : null}
+        {discount ? <Discounts /> : null}
+        <div className="flex flex-col items-center justify-center relative">
+          <img src={img} className="object-cover rounded-2xl size-48 p-1" />
+          <img src={ts} className="absolute bottom-[-50px] left-[-50px]"  />
+        </div>
       </div>
-      <h1 className="text-md font-semibold text-white ml-1 max-w-45">{title}</h1>
+      <div className="flex flex-row gap-3 items-start justify-start ml-1 flex-wrap max-w-45">
+        <div className="bg-teal-800 text-green-400 rounded-2xl   p-1 text-xs font-bold ">
+          ${price}
+        </div>
+        {Gaming ? (
+          <div className="bg-purple-800 text-violet-500/90 rounded-2xl   p-1 text-xs font-bold ">
+            Gaming
+          </div>
+        ) : null}
+        {discount ? (
+          <div className="bg-amber-700 text-amber-400 rounded-2xl   p-1 text-xs font-bold ">
+            Discount
+          </div>
+        ) : null}
+        {Tech ? (
+          <div className="bg-blue-800 text-blue-400 rounded-2xl   p-1 text-xs font-bold ">
+            Tech
+          </div>
+        ) : null}{" "}
+        {PC ? (
+          <div className="bg-cyan-800 text-cyan-400 rounded-2xl   p-1 text-xs font-bold ">
+            PC/Parts
+          </div>
+        ) : null}
+        {Nitendo ? (
+          <div className="bg-blue-800 text-red-800 rounded-2xl   p-1 text-xs font-bold ">
+            Nitendo
+          </div>
+        ) : null}
+        {Gfuel ? (
+          <div className="bg-teal-800 text-green-400 rounded-2xl   p-1 text-xs font-bold ">
+            Gfuel
+          </div>
+        ) : null}{" "}
+        {Ai ? (
+          <div className="bg-teal-800 text-green-400 rounded-2xl   p-1 text-xs font-bold ">
+            Ai
+          </div>
+        ) : null}
+        {Xbox ? (
+          <div className="bg-teal-800 text-green-400 rounded-2xl   p-1 text-xs font-bold ">
+            Xbox
+          </div>
+        ) : null}
+        {Playstation ? (
+          <div className="bg-teal-800 text-green-400 rounded-2xl   p-1 text-xs font-bold ">
+            Playstation
+          </div>
+        ) : null}
+      </div>
+      <h1 className="text-md font-semibold text-white ml-1 max-w-45">
+        {title}
+      </h1>
       <div>{/*empty div for styling purposes ONLY */}</div>
     </div>
   );
