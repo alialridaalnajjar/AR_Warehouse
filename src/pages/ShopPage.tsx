@@ -4,9 +4,11 @@ import Navbar from "../components/Navbar";
 import SearchBar from "../components/SearchBar";
 import type { ProductCardType } from "../types/productCardType";
 export default function ShopPage({
-  ProductsBase,
+  ProductsBase,setCartItems
 }: {
   ProductsBase: ProductCardType[];
+  cartItems:ProductCardType[];
+  setCartItems: React.Dispatch<React.SetStateAction<ProductCardType[]>>;
 }) {
   const [search, setSearch] = useState("");
   const [selectedCategory, setSelectedCategory] = useState<string[]>([]);
@@ -41,8 +43,9 @@ export default function ShopPage({
             <span className="text-violet-500">{myProducts.length}</span> results{" "}
           </h1>
         ) : null}
-        <div className=" mt-20 flex flex-wrap justify-center items-center flex-row">
+        <div className=" mt-20 flex flex-wrap justify-center items-center flex-row" >
           {myProducts.map((i) => (
+            <div onClick={() => setCartItems(prev => [...prev, i])} >
             <ShopCard
               img={i.img}
               price={i.price}
@@ -57,7 +60,7 @@ export default function ShopPage({
               discount={i.discount}
               Gaming={i.Gaming}
               key={i.key}
-            />
+            /></div>
           ))}
         </div>
       </div>

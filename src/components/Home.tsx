@@ -32,7 +32,7 @@ export default function Home() {
       </div>
       {/* GO TO PRODUCTS button # here we go to the PRODUCTS page */}
 
-      <Link to="/">
+      <Link to="/ShopPage">
         <div className="rounded-md w-75 text-center mx-auto p-2 bg-violet-500/50 flex flex-row justify-center items-center gap-3">
           <span className="font-semibold">Get Yours Now! </span>
           <div>

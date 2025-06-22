@@ -18,11 +18,13 @@ export default function Navbar() {
       {isNavClicked ? (
         <div className="fixed w-full bg-black z-50">
           <div className="flex flex-row items-center justify-between w-full p-7 gap-5 h-fit">
-            <Link to="/MainPage" >
-            <h1 className="text-violet-500 font-extrabold text-xl">
-              AR Warehouse
-            </h1></Link>
-            <ShoppingCart className="ml-auto size-10 text-violet-500 border-1 border-violet-500 p-2 rounded-md font-extrabold" />
+            <Link to="/MainPage">
+              <h1 className="text-violet-500 font-extrabold text-xl">
+                AR Warehouse
+              </h1>
+            </Link>
+             <Link to="/CartPage" className="ml-auto" >
+            <ShoppingCart className="ml-auto size-10 text-violet-500 border-1 border-violet-500 p-2 rounded-md font-extrabold" /></Link>
             <Menu
               className="size-10 text-violet-500"
               onClick={handleNavClick}
@@ -47,7 +49,7 @@ export default function Navbar() {
                 <h1 className="text-violet-500 text-2xl ">Products</h1>
               </div>
             </Link>
-            <Link to="/ShopPage" className="w-full mr-2.5">
+            <Link to="/AboutPage" className="w-full mr-2.5">
               <div className="flex-row items-center justify-start gap-6 flex w-full  ml-2.5">
                 <ShieldAlert className=" size-7 text-violet-500" />
                 <h1 className="text-violet-500 text-2xl ">About</h1>

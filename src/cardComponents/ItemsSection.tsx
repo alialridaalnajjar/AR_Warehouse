@@ -1,15 +1,16 @@
 import Lottie from "lottie-react";
+import { Link } from "react-router-dom";
 import pressMe from "../assets/pressMe.json";
 import SlashedHr from "../HrComponents/slashedHr";
 import type { ProductCardType } from "../types/productCardType";
 import CardBluePrint from "./CardBluePrint";
-import { Link } from "react-router-dom";
 
 export default function ItemsSection({
   itemsCollection,
 }: {
   itemsCollection: ProductCardType[];
 }) {
+
   return (
     <div className="bg-black mt-10 w-full h-auto">
       <SlashedHr />

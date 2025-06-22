@@ -5,7 +5,7 @@ import { itemsCollection } from "../data/ItemsCollection";
 export default function MainPage() {
   return (
     <div className="bg-black h-auto ">
-      <Navbar />
+      <Navbar  />
       <Home />
       <ItemsSection itemsCollection={itemsCollection}  />
       <div>fgdsa</div>
