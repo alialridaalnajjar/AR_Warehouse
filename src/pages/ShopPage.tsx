@@ -9,17 +9,28 @@ export default function ShopPage({
   ProductsBase: ProductCardType[];
 }) {
   const [search, setSearch] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState<string[]>([]);
 
-  const myProducts = ProductsBase.filter((product) =>
-    product.title.toLowerCase().includes(search.toLowerCase())
-  
-  );
+  const myProducts = ProductsBase.filter((product) => {
+    const matchesSearch = product.title
+      .toLowerCase()
+      .includes(search.toLowerCase());
+    const matchesCategory =
+      selectedCategory.length === 0 ||
+      selectedCategory.some((cat) => product[cat as keyof ProductCardType]);
+    return matchesSearch && matchesCategory;
+  });
 
   return (
     <>
       <div className="bg-black h-auto min-h-screen">
         <Navbar />
-        <SearchBar search={search} setSearch={setSearch} />
+        <SearchBar
+          search={search}
+          setSearch={setSearch}
+          selectedCategory={selectedCategory}
+          setSelectedCategory={setSelectedCategory}
+        />
         {myProducts.length !== 0 && search !== "" ? (
           <h1 className="text-white text-lg mt-10 mx-20">
             Results for: <span className="text-violet-500">{search}</span>{" "}
