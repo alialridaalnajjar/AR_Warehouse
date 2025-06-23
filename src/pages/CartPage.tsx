@@ -5,17 +5,17 @@ import type { ProductCardType } from "../types/productCardType";
 
 export default function CartPage({
   cartItems,
-  count,
+
 }: {
   cartItems: ProductCardType[];
   setCartItems: React.Dispatch<React.SetStateAction<ProductCardType[]>>;
-  count: number;
+  
 }) {
   return (
     <div className="bg-black h-auto min-h-screen">
-      <Navbar count={count} />
+      <Navbar />
       {cartItems.length !== 0 ? (
-        <div className="pt-30 flex flex-wrap justify-center items-center flex-row">
+        <div className="pt-42 flex flex-wrap justify-center items-center flex-row">
           {cartItems.map((o, idx) => (
             <div key={o.key + "-" + idx}>
               <ShopCard img={o.img} price={o.price} title={o.title} />

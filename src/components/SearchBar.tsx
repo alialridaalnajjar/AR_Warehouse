@@ -10,7 +10,7 @@ export default function SearchBar({
 }: searchType & selectedCategoryType) {
   const [showFilters, setShowFilters] = useState(false);
   return (
-    <div className="pt-30 ">
+    <div className="pt-40 ">
       {showFilters ? (
         <FilterBar
           setSelectedCategory={setSelectedCategory}

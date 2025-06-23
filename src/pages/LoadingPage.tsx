@@ -1,7 +1,7 @@
 import Lottie from "lottie-react";
-import loading from "../assets/MainLoading.json";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import loading from "../assets/MainLoading.json";
 export default function LoadingPage() {
     const navigate = useNavigate();
 useEffect(() => {

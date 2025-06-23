@@ -18,7 +18,7 @@ function App() {
           <Route path="/" element={<LoadingPage />} />
           <Route
             path="/MainPage"
-            element={<MainPage count={count} setCount={setCount} />}
+            element={<MainPage count={count}/>}
           />
           <Route
             path="/ShopPage"
@@ -28,18 +28,18 @@ function App() {
                 cartItems={cartItems}
                 setCartItems={setCartItems}
                 count={count}
-                setCount={setCount}
+                setCount={setCount} 
               />
             }
           />
-          <Route path="/AboutPage" element={<AboutPage count={count} />} />
+          <Route path="/AboutPage" element={<AboutPage count={count}  />} />
           <Route
             path="/CartPage"
             element={
               <CartPage
                 cartItems={cartItems}
                 setCartItems={setCartItems}
-                count={count}
+              
               />
             }
           />

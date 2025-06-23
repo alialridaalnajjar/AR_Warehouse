@@ -4,11 +4,14 @@ import pressMe from "../assets/pressMe.json";
 import SlashedHr from "../HrComponents/slashedHr";
 import type { ProductCardType } from "../types/productCardType";
 import CardBluePrint from "./CardBluePrint";
+import CartComponent from "../HrComponents/CartComponent";
 
 export default function ItemsSection({
   itemsCollection,
+  count,
 }: {
   itemsCollection: ProductCardType[];
+  count: number;
 }) {
 
   return (
@@ -49,6 +52,7 @@ export default function ItemsSection({
           </div>
         </div>
       </Link>
+       <CartComponent count={count} />
     </div>
   );
 }

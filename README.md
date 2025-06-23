@@ -1,54 +1,106 @@
-# React + TypeScript + Vite
+# AR Warehouse 🕹️
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive e-commerce web app for esports gadgets, built with React, TypeScript, and Tailwind CSS.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## Expanding the ESLint configuration
+- **Product Catalog**: Browse a curated list of gaming and tech products.
+- **Search & Filter**: Instantly search and filter products by category (Tech, Gaming, Console, etc).
+- **Cart System**: Add items to your cart, view and remove them. Cart resets on reload (no backend).
+- **Responsive UI**: Mobile-friendly, clean design using Tailwind CSS.
+- **Animated UI**: Engaging Lottie animations and smooth transitions.
+- **Routing**: Multi-page navigation with React Router.
+- **Component-Based**: Modular, reusable React components.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## 📸 Screenshots
+
+![Main Page](./screenshots/mainpage.png)
+![Shop Page](./screenshots/shoppage.png)
+![Cart Page](./screenshots/cartpage.png)
+
+---
+
+## 🛠️ Tech Stack
+
+- **Frontend**: React, TypeScript
+- **Styling**: Tailwind CSS
+- **Routing**: React Router
+- **Animation**: Lottie-react
+
+---
+
+## 🏁 Getting Started
+
+1. **Clone the repo**
+   ```bash
+   git clone https://github.com/yourusername/ar-warehouse.git
+   cd ar-warehouse
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Start the development server**
+   ```bash
+   npm run dev
+   ```
+
+4. **Open in your browser**
+   ```
+   http://localhost:5173
+   ```
+
+---
+
+## 📂 Project Structure
+
+```
+src/
+  assets/           # Images, Lottie files, etc.
+  cardComponents/   # Product and cart card components
+  components/       # Navbar, Home, About, etc.
+  data/             # Product data
+  HrComponents/     # FilterBar, CartComponent, etc.
+  pages/            # MainPage, ShopPage, CartPage, etc.
+  types/            # TypeScript types
+  App.tsx           # Main app entry
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## ✨ Customization
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+- **Add Products**: Edit `src/data/ProductsBase.ts` to add or update products.
+- **Categories**: Update `src/HrComponents/FilterBar.tsx` for new categories.
+- **Styling**: Tweak Tailwind classes in components for your own look.
+
+---
+
+## 🤝 Contributing
+
+Pull requests are welcome! For major changes, please open an issue first to discuss what you would like to change.
+
+---
+
+## 📄 License
+
+[MIT](LICENSE)
+
+---
+
+## 🙏 Credits
+
+- [React](https://react.dev/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Lottie-react](https://lottiefiles.com/)
+- [Lucide Icons](https://lucide.dev/)
+
+---
+
+> Made with ❤️ for esports fans!

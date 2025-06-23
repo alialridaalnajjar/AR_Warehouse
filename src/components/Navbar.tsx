@@ -1,7 +1,8 @@
-import { House, Menu, ShieldAlert, ShoppingBasket, ShoppingCart, Signature, User, X } from "lucide-react";
+import { House, Menu, ShieldAlert, ShoppingBasket, Signature, User, X } from "lucide-react";
 import React from "react";
 import { Link } from "react-router-dom";
-export default function Navbar({count}: {count: number}) {
+import img from "../assets/ARIMG.png";
+export default function Navbar() {
   const [isNavClicked, setIsNavClicked] = React.useState(true);
   const handleNavClick = () => {
     if (isNavClicked) {
@@ -20,14 +21,9 @@ export default function Navbar({count}: {count: number}) {
                 AR Warehouse
               </h1>
             </Link>
-            <Link to="/CartPage" className="ml-auto">
-              <div className="relative">
-                <div className="absolute right-0 bg-violet-500 rounded-full  text-sm    ">
-                  {count !== 0 ? count : 0}
-                </div>
-                <ShoppingCart className="ml-auto size-10 text-violet-500 border-1 border-violet-500 p-2 rounded-md font-extrabold" />
-              </div>
-            </Link>
+            <Link to="/MainPage" className="ml-auto">
+           <img src={img} className="size-18 rounded-full "/>
+           </Link>
             <Menu
               className="size-10 text-violet-500"
               onClick={handleNavClick}

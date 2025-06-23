@@ -1,12 +1,13 @@
 import ARIMG from "../assets/ARIMG.png"; // Adjust the path and filename as needed
 import About from "../components/About";
 import Navbar from "../components/Navbar";
+import CartComponent from "../HrComponents/CartComponent";
 
 export default function AboutPage({count}: {count: number}) {
   return (
     <div className="bg-black h-auto min-h-screen">
-      <Navbar count={count} />
-      <div className="pt-25">
+      <Navbar  />
+      <div className="pt-32">
         <div className="mt-12 flex flex-row justify-center items-center">
         <img
           src={ARIMG}
@@ -15,6 +16,7 @@ export default function AboutPage({count}: {count: number}) {
       </div>
       <hr className="bg-violet-500 mt-5 mx-10" />
       <About /></div>
+       <CartComponent count={count} />
     </div>
   );
 }

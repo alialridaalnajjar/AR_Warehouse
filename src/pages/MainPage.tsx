@@ -2,13 +2,13 @@ import ItemsSection from "../cardComponents/ItemsSection";
 import Home from "../components/Home";
 import Navbar from "../components/Navbar";
 import { itemsCollection } from "../data/ItemsCollection";
-export default function MainPage({count}: {count: number; setCount: React.Dispatch<React.SetStateAction<number>>}) {
+export default function MainPage({count}: {count: number}) {
   return (
     <div className="bg-black h-auto ">
-      <Navbar count={count}  />
+      <Navbar />
       <Home />
-      <ItemsSection itemsCollection={itemsCollection}  />
-      <div>fgdsa</div>
+      <ItemsSection itemsCollection={itemsCollection} count={count} />
+      
     </div>
   );
 }

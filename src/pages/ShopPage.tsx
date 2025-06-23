@@ -2,6 +2,7 @@ import { useState } from "react";
 import ShopCard from "../cardComponents/ShopCard";
 import Navbar from "../components/Navbar";
 import SearchBar from "../components/SearchBar";
+import CartComponent from "../HrComponents/CartComponent";
 import type { ProductCardType } from "../types/productCardType";
 export default function ShopPage({
   ProductsBase,
@@ -31,7 +32,7 @@ export default function ShopPage({
   return (
     <>
       <div className="bg-black h-auto min-h-screen">
-        <Navbar count={count} />
+        <Navbar />
         <SearchBar
           search={search}
           setSearch={setSearch}
@@ -74,6 +75,7 @@ export default function ShopPage({
             </div>
           ))}
         </div>
+        <CartComponent count={count} />
       </div>
     </>
   );
