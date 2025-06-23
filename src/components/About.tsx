@@ -7,7 +7,7 @@ export default function About() {
           <span className="text-violet-400"> Warehouse</span>
         </h1>
       </div>
-      <h1 className="text-gray-200/90 font-normal text-md text-center mt-4 p-1 mx-5">
+      <h1 className="text-gray-200/90 font-normal text-md text-center mt-4 p-1 mx-5 lg:text-2xl lg:max-w-3xl lg:mx-auto">
         We're a community-focused hub for top-tier esports gadgets, committed to
         fueling your passion for gaming and elevating your competitive play
       </h1>

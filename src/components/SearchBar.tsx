@@ -19,7 +19,7 @@ export default function SearchBar({
       ) : null}
 
       <div className="flex flex-row items-center justify-around">
-        <div className="rounded-xl flex flex-row justify-around items-center border-1 border-violet-500/50 bg-black/30 w-69 h-12  p-0.5 ">
+        <div className="rounded-xl flex flex-row justify-around items-center border-1 border-violet-500/50 bg-black/30 w-69 h-12  p-0.5 lg:w-106 lg:h-16 lg:p-1">
           <input
             onChange={(e) => setSearch(e.target.value)}
             value={search}
@@ -31,7 +31,7 @@ export default function SearchBar({
         </div>
         <div className="border-1 border-violet-500/50 rounded-xl p-2">
           <SlidersHorizontal
-            className="size-6 text-violet-500/70"
+            className="size-6 text-violet-500/70 lg:size-10"
             onClick={() => setShowFilters(!showFilters)}
           />
         </div>

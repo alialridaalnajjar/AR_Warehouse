@@ -17,15 +17,15 @@ export default function Navbar() {
         <div className="fixed w-full bg-black z-50">
           <div className="flex flex-row items-center justify-between w-full p-7 gap-5 h-fit">
             <Link to="/MainPage">
-              <h1 className="text-violet-500 font-extrabold text-xl">
+              <h1 className="text-violet-500 font-extrabold text-xl lg:text-3xl lg:ml-10 ">
                 AR Warehouse
               </h1>
             </Link>
             <Link to="/MainPage" className="ml-auto">
-           <img src={img} className="size-18 rounded-full "/>
+           <img src={img} className="size-18 rounded-full lg:size-20 lg:mr-20 "/>
            </Link>
             <Menu
-              className="size-10 text-violet-500"
+              className="size-10 text-violet-500 lg:size-12"
               onClick={handleNavClick}
             />
           </div>

@@ -28,9 +28,9 @@ export default function FilterBar({ selectedCategory, setSelectedCategory }: sel
   };
 
   return (
-    <div className="text-white">
-      <h1 className="text-xl ml-5  mb-2 font-semibold">Categories</h1>
-      <div className="border-violet-500/50 rounded-lg border-1 h-fit w-fit mb-5 mx-5 p-1 bg-violet-900/50 flex-wrap flex flex-row justify-around gap-3">
+    <div className="text-white lg:mt-10 lg:mb-10 lg:max-w-7xl lg:mx-auto">
+      <h1 className="text-xl ml-5  mb-2 font-semibold lg:mx-auto lg:w-fit">Categories</h1>
+      <div className="border-violet-500/50 rounded-lg border-1 h-fit w-fit mb-5 mx-5 p-1 bg-violet-900/50 flex-wrap flex flex-row justify-around gap-3 lg:mx-auto lg:max-w-7xl lg:p-4">
         <div
           className={`rounded-3xl p-1 text-sm cursor-pointer ${isAllSelected ? "bg-amber-500" : "bg-violet-500"}`}
           onClick={() => toggleCategory("All")}
