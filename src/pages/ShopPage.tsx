@@ -1,5 +1,6 @@
 import { useState } from "react";
 import ShopCard from "../cardComponents/ShopCard";
+import AddedToCartSuccesfuly from "../components/AddedToCartSuccesfuly";
 import Navbar from "../components/Navbar";
 import SearchBar from "../components/SearchBar";
 import CartComponent from "../HrComponents/CartComponent";
@@ -16,6 +17,8 @@ export default function ShopPage({
   setCount: React.Dispatch<React.SetStateAction<number>>;
   count: number;
 }) {
+  const [renderAddedToCart, setRenderAddedToCart] = useState(false);
+  // const [cartItems, setCartItems] = useState<ProductCard
   const [search, setSearch] = useState("");
   const [selectedCategory, setSelectedCategory] = useState<string[]>([]);
 
@@ -55,6 +58,12 @@ export default function ShopPage({
               onClick={() => {
                 setCartItems((prev) => [...prev, i]);
                 setCount((prev) => prev + 1);
+                setRenderAddedToCart(true);
+                setTimeout(() => {
+                  setRenderAddedToCart(false);
+                }, 3000);
+
+               
               }}
             >
               <ShopCard
@@ -76,6 +85,7 @@ export default function ShopPage({
           ))}
         </div>
         <CartComponent count={count} />
+        {renderAddedToCart ? <AddedToCartSuccesfuly /> : null}
       </div>
     </>
   );
