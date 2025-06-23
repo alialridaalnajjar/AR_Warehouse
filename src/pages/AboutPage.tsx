@@ -2,6 +2,7 @@ import ARIMG from "../assets/ARIMG.png"; // Adjust the path and filename as need
 import About from "../components/About";
 import Navbar from "../components/Navbar";
 import CartComponent from "../HrComponents/CartComponent";
+import Footer from "../HrComponents/Footer";
 
 export default function AboutPage({count}: {count: number}) {
   return (
@@ -17,6 +18,7 @@ export default function AboutPage({count}: {count: number}) {
       <hr className="bg-violet-500 mt-5 mx-10" />
       <About /></div>
        <CartComponent count={count} />
+       <Footer />
     </div>
   );
 }

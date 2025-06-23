@@ -1,6 +1,7 @@
 import { ShoppingCart } from "lucide-react";
 import ShopCard from "../cardComponents/ShopCard";
 import Navbar from "../components/Navbar";
+import Footer from "../HrComponents/Footer";
 import type { ProductCardType } from "../types/productCardType";
 
 export default function CartPage({
@@ -31,6 +32,8 @@ export default function CartPage({
           </h1>{" "}
         </div>
       )}
+      <div className=" fixed bottom-0 right-0 left-0">
+      <Footer /></div>
     </div>
   );
 }

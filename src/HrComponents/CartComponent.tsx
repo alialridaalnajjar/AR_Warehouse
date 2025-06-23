@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 export default function CartComponent({count}: {count: number}) {
   return (
-    <div className="fixed bottom-10 right-10">
+    <div className="fixed bottom-10 right-10 z-50">
         <Link to="/CartPage" className="ml-auto">
           <div className="relative">
             <div className="absolute top-[-25px] right-[-5px] font-extrabold text-violet-800 rounded-full  text-sm p-2   ">

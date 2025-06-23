@@ -4,6 +4,7 @@ import AddedToCartSuccesfuly from "../components/AddedToCartSuccesfuly";
 import Navbar from "../components/Navbar";
 import SearchBar from "../components/SearchBar";
 import CartComponent from "../HrComponents/CartComponent";
+import Footer from "../HrComponents/Footer";
 import type { ProductCardType } from "../types/productCardType";
 export default function ShopPage({
   ProductsBase,
@@ -87,6 +88,7 @@ export default function ShopPage({
         <CartComponent count={count} />
         {renderAddedToCart ? <AddedToCartSuccesfuly /> : null}
       </div>
+      <Footer/>
     </>
   );
 }
