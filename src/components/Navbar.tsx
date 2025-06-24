@@ -34,7 +34,10 @@ export default function Navbar() {
       ) : (
         <div className=" fixed inset-0 backdrop-blur-xs z-50 ">
           {/* OverLay taking whole screen and another div inside it !!*/}
-          <div className="absolute z-10 right-0 w-40 h-fit  flex flex-col items-end justify-end pt-2 gap-2 bg-black/30 shadow-lg shadow-violet-500/50 rounded-l-2xl p-1">
+          <div
+    className="absolute z-10 right-0 w-40 h-fit flex flex-col items-end justify-end pt-2 gap-2 bg-black/30 shadow-lg shadow-violet-500/50 rounded-l-2xl p-1
+      animate-slide-in"
+  >
             <X className="text-white mr-2 mt-2 " onClick={handleNavClick} />
             <Link to="/MainPage" className="w-full mr-2.5">
               <div className="flex-row items-center justify-start gap-6 flex w-full ml-2.5">
@@ -85,6 +88,19 @@ export default function Navbar() {
             0%, 100% { width: 100%; }
             50% { width: 25%; }
           }
+          @keyframes slide-in {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.animate-slide-in {
+  animation: slide-in 0.4s cubic-bezier(0.4,0,0.2,1) both;
+}
         `}
       </style>
     </>

@@ -13,9 +13,11 @@ export default function cardBluePrint({
   Playstation,
   PC,
   Gaming,
+  onClick,
 }: ProductCardType) {
   return (
-    <div className="flex flex-col items-start gap-1.5 mx-auto">
+    <div className="flex flex-col items-start gap-1.5 mx-auto" onClick={onClick}>
+      
       <div className="relative">
         {discount ? <Discounts /> : null}
         <img src={img} className="object-cover rounded-2xl size-90 p-1" />

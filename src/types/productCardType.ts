@@ -12,7 +12,7 @@ export type ProductCardType = {
   PC?: boolean;
   Gaming?: boolean;
   key?: string; 
- 
+ onClick?: () => void;
 };
 
 export type searchType = {

@@ -1,8 +1,10 @@
 import Lottie from "lottie-react";
+import React from "react";
 import { Link } from "react-router-dom";
 import pressMe from "../assets/pressMe.json";
 import CartComponent from "../HrComponents/CartComponent";
 import SlashedHr from "../HrComponents/slashedHr";
+import LoadingToShop from "../pages/LoadingToShop";
 import type { ProductCardType } from "../types/productCardType";
 import CardBluePrint from "./CardBluePrint";
 
@@ -13,7 +15,14 @@ export default function ItemsSection({
   itemsCollection: ProductCardType[];
   count: number;
 }) {
-
+const[loading, setLoading] = React.useState(false);
+if (loading) {
+  return (
+    <div className="fixed inset-0 z-50 flex justify-center items-center backdrop-blur-2xl bg-black/70">
+      <LoadingToShop />
+    </div>
+  );
+}
   return (
     <div className="bg-black mt-10 w-full h-auto">
       <SlashedHr  />
@@ -37,6 +46,7 @@ export default function ItemsSection({
             discount={i.discount}
             Gaming={i.Gaming}
             key={i.key} // Ensure each item has a unique key
+           onClick={()=>setLoading(true)}
           />
         ))}
       </section>
