@@ -8,7 +8,7 @@ export default function MainPage({count}: {count: number}) {
     <div className="bg-black h-auto ">
       <Navbar />
       <Home />
-      <ItemsSection itemsCollection={itemsCollection} count={count} />
+      <ItemsSection itemsCollection={itemsCollection} count={count}  />
       <Footer />
     </div>
   );

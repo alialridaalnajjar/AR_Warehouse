@@ -9,7 +9,7 @@ import MainPage from "./pages/MainPage";
 import ShopPage from "./pages/ShopPage";
 import type { ProductCardType } from "./types/productCardType";
 function App() {
-  const [cartItems, setCartItems] = useState<ProductCardType[]>([]);
+  const [cartItems, setCartItems] = useState<{ product: ProductCardType; quantity: number }[]>([]);
   const [count, setCount] = useState(0);
   return (
     <>
@@ -39,7 +39,6 @@ function App() {
               <CartPage
                 cartItems={cartItems}
                 setCartItems={setCartItems}
-              
               />
             }
           />
