@@ -9,15 +9,13 @@ import type { ProductCardType } from "../types/productCardType";
 
 export default function ShopPage({
   ProductsBase,
-  
+ 
   setCartItems,
-  setCount,
   count,
 }: {
   ProductsBase: ProductCardType[];
   cartItems: { product: ProductCardType; quantity: number }[];
   setCartItems: React.Dispatch<React.SetStateAction<{ product: ProductCardType; quantity: number }[]>>;
-  setCount: React.Dispatch<React.SetStateAction<number>>;
   count: number;
 }) {
   const [renderAddedToCart, setRenderAddedToCart] = useState(false);
@@ -127,7 +125,7 @@ export default function ShopPage({
                     return [...prev, { product: selectedProduct, quantity: selectedQuantity }];
                   }
                 });
-                setCount(prev => prev + selectedQuantity);
+                // setCount(prev => prev + selectedQuantity);
                 setRenderAddedToCart(true);
                 setSelectedProduct(null);
                 setTimeout(() => {

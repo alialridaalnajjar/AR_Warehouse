@@ -6,10 +6,14 @@ import type { ProductCardType } from "../types/productCardType";
 export default function CartPage({
   cartItems,
   setCartItems,
+  
 }: {
   cartItems: { product: ProductCardType; quantity: number }[];
   setCartItems: React.Dispatch<React.SetStateAction<{ product: ProductCardType; quantity: number }[]>>;
+  count: number;
 }) {
+
+ 
   return (
     <div className="bg-black min-h-screen flex flex-col">
       <Navbar />
@@ -87,6 +91,7 @@ export default function CartPage({
           </div>
         )}
       </div>
+      <div className=" text-violet-500 relative bottom-[-20px] ml-auto mr-5 z-40 border-1 p-2 rounded-xl caret-transparent" onClick={() => setCartItems([])}>Proceed To Checkout</div>
       <Footer />
     </div>
   );
