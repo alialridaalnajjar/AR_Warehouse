@@ -11,8 +11,10 @@ export default function Footer() {
             <h1 className='text-white text-2xl font-semibold'> <span className="text-violet-500 ">AR</span> Warehouse</h1>
         </div>
         <div className='flex flex-row items-center justify-center gap-3 mt-4'>
-            <FaInstagram className='text-violet-500 size-10  mt-2' href='https://instagram.com/hereisrawr' />
-            <FaGithub className='text-violet-500 size-10  mt-2' href='https://github.com/alialridaalnajjar' />
+          <a href="https://instagram.com/hereisrawr">
+            <FaInstagram className='text-violet-500 size-10  mt-2'  /></a>
+            <a href="https://github.com/alialridaalnajjar">
+            <FaGithub className='text-violet-500 size-10  mt-2' /></a>
         </div>
         <div className='text-white text-center mt-2 pb-4'>© 2025 Ali Al Najjar - All Rights Reserved.</div>
 
