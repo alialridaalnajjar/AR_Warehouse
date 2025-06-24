@@ -17,7 +17,9 @@ export default function MainPage({
       <Navbar />
       <Home />
       <ItemsSection itemsCollection={itemsCollection} count={count}  />
-      <Footer />
+      <div id="footer">
+        <Footer />
+      </div>
     </div>
   );
 }

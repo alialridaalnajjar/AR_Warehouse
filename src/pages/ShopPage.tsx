@@ -9,19 +9,22 @@ import type { ProductCardType } from "../types/productCardType";
 
 export default function ShopPage({
   ProductsBase,
- 
+
   setCartItems,
   count,
 }: {
   ProductsBase: ProductCardType[];
   cartItems: { product: ProductCardType; quantity: number }[];
-  setCartItems: React.Dispatch<React.SetStateAction<{ product: ProductCardType; quantity: number }[]>>;
+  setCartItems: React.Dispatch<
+    React.SetStateAction<{ product: ProductCardType; quantity: number }[]>
+  >;
   count: number;
 }) {
   const [renderAddedToCart, setRenderAddedToCart] = useState(false);
   const [search, setSearch] = useState("");
   const [selectedCategory, setSelectedCategory] = useState<string[]>([]);
-  const [selectedProduct, setSelectedProduct] = useState<ProductCardType | null>(null);
+  const [selectedProduct, setSelectedProduct] =
+    useState<ProductCardType | null>(null);
   const [selectedQuantity, setSelectedQuantity] = useState<number>(1);
 
   const myProducts = ProductsBase.filter((product) => {
@@ -84,7 +87,9 @@ export default function ShopPage({
         <CartComponent count={count} />
         {renderAddedToCart ? <AddedToCartSuccesfuly /> : null}
       </div>
-      <Footer />
+      <div id="footer">
+        <Footer />
+      </div>
       {selectedProduct && (
         <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-50">
           <div className="bg-white rounded-lg p-6 max-w-sm w-full modal-fade-in">
@@ -102,27 +107,39 @@ export default function ShopPage({
             <div className="flex items-center gap-2 mb-4">
               <button
                 className="bg-gray-200 px-3 py-1 rounded text-lg font-bold"
-                onClick={() => setSelectedQuantity(q => Math.max(1, q - 1))}
-              >-</button>
+                onClick={() => setSelectedQuantity((q) => Math.max(1, q - 1))}
+              >
+                -
+              </button>
               <span className="font-bold text-lg">{selectedQuantity}</span>
               <button
                 className="bg-gray-200 px-3 py-1 rounded text-lg font-bold"
-                onClick={() => setSelectedQuantity(q => q + 1)}
-              >+</button>
+                onClick={() => setSelectedQuantity((q) => q + 1)}
+              >
+                +
+              </button>
             </div>
             <button
               className="bg-violet-500 text-white px-4 py-2 rounded mr-2"
               onClick={() => {
-                setCartItems(prev => {
-                  const found = prev.find(item => item.product.key === selectedProduct.key);
+                setCartItems((prev) => {
+                  const found = prev.find(
+                    (item) => item.product.key === selectedProduct.key
+                  );
                   if (found) {
-                    return prev.map(item =>
+                    return prev.map((item) =>
                       item.product.key === selectedProduct.key
-                        ? { ...item, quantity: item.quantity + selectedQuantity }
+                        ? {
+                            ...item,
+                            quantity: item.quantity + selectedQuantity,
+                          }
                         : item
                     );
                   } else {
-                    return [...prev, { product: selectedProduct, quantity: selectedQuantity }];
+                    return [
+                      ...prev,
+                      { product: selectedProduct, quantity: selectedQuantity },
+                    ];
                   }
                 });
                 // setCount(prev => prev + selectedQuantity);

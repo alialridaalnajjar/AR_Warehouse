@@ -91,7 +91,7 @@ export default function CartPage({
           </div>
         )}
       </div>
-      <div className=" text-violet-500 relative bottom-[-20px] ml-auto mr-5 z-40 border-1 p-2 rounded-xl caret-transparent" onClick={() => setCartItems([])}>Proceed To Checkout</div>
+      <div id="footer" className=" text-violet-500 relative bottom-[-20px] ml-auto mr-5 z-40 border-1 p-2 rounded-xl caret-transparent" onClick={() => setCartItems([])}>Proceed To Checkout</div>
       <Footer />
     </div>
   );

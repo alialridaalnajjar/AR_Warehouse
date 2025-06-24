@@ -11,7 +11,7 @@ useEffect(() => {
   }, [navigate]);
 
   return (
-    <div className="bg-black h-screen">
+    <div className="bg-black h-screen " id="footer">
       <Lottie animationData={loading} className="size-3/4 mx-auto" />
     </div>
   );

@@ -57,12 +57,12 @@ export default function Navbar() {
                 <h1 className="text-violet-500 text-2xl ">About</h1>
               </div>
             </Link>
-            <Link to="/ShopPage" className="w-full mr-2.5">
+            <a href="#footer" className="w-full mr-2.5">
               <div className="flex-row items-center justify-start gap-6 flex w-full  ml-2.5">
                 <Signature className=" size-7 text-violet-500" />
                 <h1 className="text-violet-500 text-2xl ">Contact</h1>
               </div>
-            </Link>
+            </a>
             <hr className="custom-hr rounded-4xl h-full w-full" />
             <Link to="/ShopPage" className="w-full mr-2.5">
               {" "}
