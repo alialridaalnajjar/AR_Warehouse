@@ -20,17 +20,7 @@ A modern, responsive e-commerce web app for esports gadgets, built with **React*
 - **Routing:** Multi-page navigation with React Router.
 - **Component-Based:** Modular, reusable React components.
 
----
 
-## 📸 Screenshots
-
-![Main Page](./src/assets/Screenshot%202025-06-23%20173026.png)
-![](./src/assets/1.png)
-![](./src/assets/2fdsaf.png)
-![](./src/assets/3fvsdc.png)
-![](./src/assets/4fgsdc.png)
-![](./src/assets/5dsgvv.png)
-![](./src/assets/6vfddxvx.png)
 
 ---
 
@@ -115,3 +105,15 @@ Pull requests are welcome! For major changes, please open an issue first to disc
 ---
 
 > Made with ❤️ for esports fans!
+
+---
+
+## 📸 Screenshots
+
+![Main Page](./src/assets/Screenshot%202025-06-23%20173026.png)
+![](./src/assets/1.png)
+![](./src/assets/2fdsaf.png)
+![](./src/assets/3fvsdc.png)
+![](./src/assets/4fgsdc.png)
+![](./src/assets/5dsgvv.png)
+![](./src/assets/6vfddxvx.png)
