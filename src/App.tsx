@@ -9,6 +9,7 @@ import MainPage from "./pages/MainPage";
 import ShopPage from "./pages/ShopPage";
 import type { ProductCardType } from "./types/productCardType";
 import ScrollToTop from "./customIconsComponents/ScrollToTop";
+import AccountPage from "./pages/AccountPage";
 
 function App() {
   const [darkMode, setDarkMode] = useState(true);
@@ -70,6 +71,10 @@ function App() {
                 setDarkMode={setDarkMode}
               />
             }
+          />
+          <Route
+            path="/AccountPage"
+            element={<AccountPage darkMode={darkMode} setDarkMode={setDarkMode} />}
           />
         </Routes>
       </Router>

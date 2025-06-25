@@ -15,7 +15,7 @@ export default function Navbar({darkMode, setDarkMode}: {darkMode: boolean; setD
   return (
     <>
       {isNavClicked ? (
-        <div className={`fixed w-full z-50 caret-transparent ${darkMode ? "bg-black" : "bg-slate-700"}`}>
+        <div className={`fixed w-full z-50 caret-transparent ${darkMode ? "bg-black" : "bg-slate-700"} animate-slide-down`}>
           <div className="flex flex-row items-center justify-between w-full p-7 gap-5 h-fit">
             <Link to="/MainPage">
               <h1 className={`${darkMode ? "text-violet-500" : "text-purple-700"} font-extrabold text-xl lg:text-3xl lg:ml-10`}>
@@ -64,7 +64,7 @@ export default function Navbar({darkMode, setDarkMode}: {darkMode: boolean; setD
               </div>
             </a>
             <hr className="custom-hr rounded-4xl h-full w-full" />
-            <Link to="/ShopPage" className="w-full mr-2.5">
+            <Link to="/AccountPage" className="w-full mr-2.5">
               {" "}
               <div className="flex-row items-center justify-start gap-6 flex w-full  ml-2.5">
                 <User className=" size-7 text-violet-500" />
@@ -110,6 +110,13 @@ export default function Navbar({darkMode, setDarkMode}: {darkMode: boolean; setD
           }
           .sunmoon-animate {
             animation: rotate-sunmoon 0.5s cubic-bezier(0.4,0,0.2,1);
+          }
+          @keyframes slide-down {
+            from { transform: translateY(-100%); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+          }
+          .animate-slide-down {
+            animation: slide-down 0.5s cubic-bezier(0.4,0,0.2,1) both;
           }
         `}
       </style>

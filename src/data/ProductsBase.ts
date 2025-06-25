@@ -109,7 +109,7 @@ export const ProductsBase: (ProductCardType & { key: string })[] = [
   },
   {
     key: "gaming-discount-tech-playstation-8",
-    img: "https://m.media-amazon.com/images/I/41TnqQ0prBL._SX300_SY300_QL70_FMwebp_.jpg",
+    img: "https://fattalonline.com/cdn/shop/files/274872-4.png?v=1749721707",
     price: 499.99,
     title: "PlayStation 5 Console (PS5)",
     Gaming: true,
