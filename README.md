@@ -1,18 +1,24 @@
 # AR Warehouse 🕹️
 
-A modern, responsive e-commerce web app for esports gadgets, built with React, TypeScript, and Tailwind CSS.
+[![React](https://img.shields.io/badge/React-18-blue?logo=react)](https://react.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?logo=typescript)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-3-06B6D4?logo=tailwindcss)](https://tailwindcss.com/)
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+
+A modern, responsive e-commerce web app for esports gadgets, built with **React**, **TypeScript**, and **Tailwind CSS**.
 
 ---
 
 ## 🚀 Features
 
-- **Product Catalog**: Browse a curated list of gaming and tech products.
-- **Search & Filter**: Instantly search and filter products by category (Tech, Gaming, Console, etc).
-- **Cart System**: Add items to your cart, view and remove them. Cart resets on reload (no backend).
-- **Responsive UI**: Mobile-friendly, clean design using Tailwind CSS.
-- **Animated UI**: Engaging Lottie animations and smooth transitions.
-- **Routing**: Multi-page navigation with React Router.
-- **Component-Based**: Modular, reusable React components.
+- **Product Catalog:** Browse a curated list of gaming and tech products.
+- **Search & Filter:** Instantly search and filter products by category (Tech, Gaming, Console, etc).
+- **Cart System:** Add, view, and remove items from your cart. Cart resets on reload (no backend).
+- **Responsive UI:** Mobile-friendly, clean design using Tailwind CSS.
+- **Animated UI:** Engaging Lottie animations and smooth transitions.
+- **Dark/Light Mode:** Toggle between dark and light themes.
+- **Routing:** Multi-page navigation with React Router.
+- **Component-Based:** Modular, reusable React components.
 
 ---
 
@@ -22,15 +28,15 @@ A modern, responsive e-commerce web app for esports gadgets, built with React, T
 ![Home Page](./src/assets/Screenshot%202025-06-23%20172942.png)
 ![Shop Page](./src/assets/Screenshot%202025-06-23%20172959.png)
 
-
 ---
 
 ## 🛠️ Tech Stack
 
-- **Frontend**: React, TypeScript
-- **Styling**: Tailwind CSS
-- **Routing**: React Router
-- **Animation**: Lottie-react
+- **Frontend:** React, TypeScript
+- **Styling:** Tailwind CSS
+- **Routing:** React Router
+- **Animation:** Lottie-react
+- **Icons:** Lucide Icons
 
 ---
 
@@ -77,9 +83,9 @@ src/
 
 ## ✨ Customization
 
-- **Add Products**: Edit `src/data/ProductsBase.ts` to add or update products.
-- **Categories**: Update `src/HrComponents/FilterBar.tsx` for new categories.
-- **Styling**: Tweak Tailwind classes in components for your own look.
+- **Add Products:** Edit `src/data/ProductsBase.ts` to add or update products.
+- **Categories:** Update `src/HrComponents/FilterBar.tsx` for new categories.
+- **Styling:** Tweak Tailwind classes in components for your own look.
 
 ---
 
