@@ -20,8 +20,24 @@ export default function ItemsSection({
   const [loading, setLoading] = React.useState(false);
   if (loading) {
     return (
-      <div className="fixed inset-0 z-50 flex justify-center items-center backdrop-blur-2xl bg-black/70">
+      <div className="fixed inset-0 z-50 flex flex-col justify-center items-center backdrop-blur-2xl bg-black/70">
         <LoadingToShop />
+        <h1
+          className="text-violet-500 font-bold mt-6 animate-shop-text"
+        >
+          Taking you to the shop
+        </h1>
+        <style>
+          {`
+          @keyframes shop-text {
+            from { opacity: 0; transform: translateY(30px);}
+            to { opacity: 1; transform: translateY(0);}
+          }
+          .animate-shop-text {
+            animation: shop-text 1.2s cubic-bezier(0.4,0,0.2,1) both;
+          }
+        `}
+        </style>
       </div>
     );
   }

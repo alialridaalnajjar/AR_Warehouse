@@ -8,6 +8,7 @@ import LoadingPage from "./pages/LoadingPage";
 import MainPage from "./pages/MainPage";
 import ShopPage from "./pages/ShopPage";
 import type { ProductCardType } from "./types/productCardType";
+import ScrollToTop from "./customIconsComponents/ScrollToTop";
 
 function App() {
   const [darkMode, setDarkMode] = useState(true);
@@ -20,6 +21,7 @@ function App() {
   return (
     <>
       <Router>
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<LoadingPage />} />
           <Route

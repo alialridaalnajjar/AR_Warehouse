@@ -15,7 +15,7 @@ export default function ShopCard({
   Gaming,
 }: ProductCardType) {
   return (
-    <div className="flex flex-col items-start gap-1.5 mx-auto">
+    <div className="flex flex-col items-start gap-1.5 mx-auto ">
       <div className="relative">
         {discount ? <Discounts /> : null}
         <div className="flex flex-col items-center justify-center relative">
@@ -23,7 +23,7 @@ export default function ShopCard({
           
         </div>
       </div>
-      <div className="flex flex-row gap-3 items-start justify-start ml-1 flex-wrap max-w-45">
+      <div className="flex flex-row gap-2.5 items-start justify-start ml-1 flex-wrap max-w-45">
         <div className="bg-teal-800 text-green-400 rounded-2xl   p-1 text-xs font-bold ">
           ${price}
         </div>
