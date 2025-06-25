@@ -14,7 +14,7 @@ export default function Navbar() {
   return (
     <>
       {isNavClicked ? (
-        <div className="fixed w-full bg-black z-50">
+        <div className="fixed w-full bg-black z-50 caret-transparent">
           <div className="flex flex-row items-center justify-between w-full p-7 gap-5 h-fit">
             <Link to="/MainPage">
               <h1 className="text-violet-500 font-extrabold text-xl lg:text-3xl lg:ml-10 ">
@@ -32,7 +32,7 @@ export default function Navbar() {
           <hr className="custom-hr rounded-4xl" style={{}} />
         </div>
       ) : (
-        <div className=" fixed inset-0 backdrop-blur-xs z-50 ">
+        <div className=" fixed inset-0 backdrop-blur-xs z-50 caret-transparent">
           {/* OverLay taking whole screen and another div inside it !!*/}
           <div
     className="absolute z-10 right-0 w-40 h-fit flex flex-col items-end justify-end pt-2 gap-2 bg-black/30 shadow-lg shadow-violet-500/50 rounded-l-2xl p-1

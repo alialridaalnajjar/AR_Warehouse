@@ -1,19 +1,32 @@
 import { ShoppingCart, Trash2 } from "lucide-react";
+import { useState } from "react";
 import Navbar from "../components/Navbar";
+import PurchasedSu from "../components/PurchasedSu";
 import Footer from "../HrComponents/Footer";
 import type { ProductCardType } from "../types/productCardType";
 
 export default function CartPage({
   cartItems,
   setCartItems,
-  
 }: {
   cartItems: { product: ProductCardType; quantity: number }[];
-  setCartItems: React.Dispatch<React.SetStateAction<{ product: ProductCardType; quantity: number }[]>>;
+  setCartItems: React.Dispatch<
+    React.SetStateAction<{ product: ProductCardType; quantity: number }[]>
+  >;
   count: number;
 }) {
+  const [showPurchased, setShowPurchased] = useState(false);
 
- 
+  const handleCheckout = () => {
+    if (cartItems.length !== 0) {
+      setShowPurchased(true);
+      setTimeout(() => {
+        setShowPurchased(false);
+      }, 3500);
+    }
+    setCartItems([]);
+  };
+
   return (
     <div className="bg-black min-h-screen flex flex-col">
       <Navbar />
@@ -25,7 +38,9 @@ export default function CartPage({
                 key={item.product.key}
                 className="bg-white rounded-lg p-3 max-w-xs w-full shadow-lg flex flex-col items-center relative"
               >
-                <h2 className="text-base font-semibold mb-2 text-center">{item.product.title}</h2>
+                <h2 className="text-base font-semibold mb-2 text-center">
+                  {item.product.title}
+                </h2>
                 <img
                   src={item.product.img}
                   className="w-20 h-20 object-cover mx-auto mb-2"
@@ -44,7 +59,10 @@ export default function CartPage({
                       setCartItems((prev) =>
                         prev.map((cartItem) =>
                           cartItem.product.key === item.product.key
-                            ? { ...cartItem, quantity: Math.max(1, cartItem.quantity - 1) }
+                            ? {
+                                ...cartItem,
+                                quantity: Math.max(1, cartItem.quantity - 1),
+                              }
                             : cartItem
                         )
                       )
@@ -71,7 +89,10 @@ export default function CartPage({
                     className="bg-red-500 text-white px-2 py-0.5 rounded ml-2 flex items-center"
                     onClick={() =>
                       setCartItems((prev) =>
-                        prev.filter((cartItem) => cartItem.product.key !== item.product.key)
+                        prev.filter(
+                          (cartItem) =>
+                            cartItem.product.key !== item.product.key
+                        )
                       )
                     }
                     title="Remove"
@@ -86,12 +107,24 @@ export default function CartPage({
           <div className="flex flex-col items-center justify-center flex-1">
             <ShoppingCart size={48} className="text-violet-500 mb-4" />
             <h1 className="text-white text-lg mx-4 text-center">
-              Your <span className="text-violet-500">cart</span> is empty. Please add items to your cart.
+              Your <span className="text-violet-500">cart</span> is empty.
+              Please add items to your cart.
             </h1>
           </div>
         )}
       </div>
-      <div id="footer" className=" text-violet-500 relative bottom-[-20px] ml-auto mr-5 z-40 border-1 p-2 rounded-xl caret-transparent" onClick={() => setCartItems([])}>Proceed To Checkout</div>
+      <div
+        id="footer"
+        className="text-violet-500 relative bottom-[-20px] ml-auto mr-5 z-40 border-1 p-2 rounded-xl caret-transparent cursor-pointer hover:bg-violet-500 hover:text-white transition"
+        onClick={handleCheckout}
+      >
+        Proceed To Checkout
+      </div>
+      {showPurchased && (
+        <div className="fixed inset-0 flex items-center justify-center z-50">
+          <PurchasedSu />
+        </div>
+      )}
       <Footer />
     </div>
   );

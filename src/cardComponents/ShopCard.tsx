@@ -1,4 +1,3 @@
-import ts from "../assets/output-onlinepngtools.png";
 import Discounts from "../customIconsComponents/Discounts";
 import type { ProductCardType } from "../types/productCardType";
 export default function ShopCard({
@@ -21,7 +20,7 @@ export default function ShopCard({
         {discount ? <Discounts /> : null}
         <div className="flex flex-col items-center justify-center relative">
           <img src={img} className="object-cover rounded-2xl size-48 p-1" />
-          <img src={ts} className="absolute bottom-[-50px] left-[-50px]"  />
+          
         </div>
       </div>
       <div className="flex flex-row gap-3 items-start justify-start ml-1 flex-wrap max-w-45">
