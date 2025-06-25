@@ -25,8 +25,12 @@ A modern, responsive e-commerce web app for esports gadgets, built with **React*
 ## 📸 Screenshots
 
 ![Main Page](./src/assets/Screenshot%202025-06-23%20173026.png)
-![Home Page](./src/assets/Screenshot%202025-06-23%20172942.png)
-![Shop Page](./src/assets/Screenshot%202025-06-23%20172959.png)
+![](./src/assets/1.png)
+![](./src/assets/2fdsaf.png)
+![](./src/assets/3fvsdc.png)
+![](./src/assets/4fgsdc.png)
+![](./src/assets/5dsgvv.png)
+![](./src/assets/6vfddxvx.png)
 
 ---
 

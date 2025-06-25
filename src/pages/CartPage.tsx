@@ -121,13 +121,15 @@ export default function CartPage({
           </div>
         )}
       </div>
-      <div
-        id="footer"
-        className="text-violet-500 relative bottom-[-20px] ml-auto mr-5 z-40 border-1 p-2 rounded-xl caret-transparent cursor-pointer hover:bg-violet-500 hover:text-white transition"
-        onClick={handleCheckout}
-      >
-        Proceed To Checkout
-      </div>
+      {cartItems.length !== 0 ? (
+        <div
+          id="footer"
+          className="text-violet-500 relative bottom-[-20px] ml-auto mr-5 z-40 border-1 p-2 rounded-xl caret-transparent cursor-pointer hover:bg-violet-500 hover:text-white transition"
+          onClick={handleCheckout}
+        >
+          Proceed To Checkout
+        </div>
+      ) : null}
       {showPurchased && (
         <div className="fixed inset-0 flex items-center justify-center z-50">
           <PurchasedSu />
