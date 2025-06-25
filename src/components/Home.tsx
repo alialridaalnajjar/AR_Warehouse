@@ -4,9 +4,9 @@ import ARIMG from "../assets/ARIMG.png";
 import gameI from "../assets/GameICON.json";
 import pressMe from "../assets/pressMe.json";
 import About from "./About";
-export default function Home() {
+export default function Home( {darkMode}: { darkMode: boolean }) {
   return (
-    <div className="bg-black h-auto w-full pt-32 ">
+    <div className={`${darkMode ? "bg-black ":"bg-slate-700"}    bg-black h-auto w-full pt-32 `}>
       <div className="flex flex-col items-center justify-center mt-10 gap-2">
         <h1 className="text-white text-3xl font-bold lg:text-5xl">Boosting Your</h1>
         <h1 className="text-violet-500  font-bold text-3xl z-10 mask-x-from-32 bg-purple-500/40 text-center p-1 rounded-md w-75 lg:text-5xl">

@@ -11,21 +11,27 @@ import CardBluePrint from "./CardBluePrint";
 export default function ItemsSection({
   itemsCollection,
   count,
+  darkMode,
 }: {
+  darkMode: boolean;
   itemsCollection: ProductCardType[];
   count: number;
 }) {
-const[loading, setLoading] = React.useState(false);
-if (loading) {
+  const [loading, setLoading] = React.useState(false);
+  if (loading) {
+    return (
+      <div className="fixed inset-0 z-50 flex justify-center items-center backdrop-blur-2xl bg-black/70">
+        <LoadingToShop />
+      </div>
+    );
+  }
   return (
-    <div className="fixed inset-0 z-50 flex justify-center items-center backdrop-blur-2xl bg-black/70">
-      <LoadingToShop />
-    </div>
-  );
-}
-  return (
-    <div className="bg-black mt-10 w-full h-auto">
-      <SlashedHr  />
+    <div
+      className={` ${
+        darkMode ? "bg-black" : "bg-slate-700"
+      }mt-10 w-full h-auto`}
+    >
+      <SlashedHr />
       <h1 className="text-white text-4xl mx-10 font-semibold lg:text-6xl  lg:max-w-3xl lg:p-2 lg:ml-16 lg:my-10 ">
         Featured <span className="text-violet-500">Now</span>
       </h1>
@@ -46,7 +52,7 @@ if (loading) {
             discount={i.discount}
             Gaming={i.Gaming}
             key={i.key} // Ensure each item has a unique key
-           onClick={()=>setLoading(true)}
+            onClick={() => setLoading(true)}
           />
         ))}
       </section>
@@ -62,7 +68,7 @@ if (loading) {
           </div>
         </div>
       </Link>
-       <CartComponent count={count} />
+      <CartComponent count={count} />
     </div>
   );
 }

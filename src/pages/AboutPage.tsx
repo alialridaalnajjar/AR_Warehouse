@@ -4,10 +4,18 @@ import Navbar from "../components/Navbar";
 import CartComponent from "../HrComponents/CartComponent";
 import Footer from "../HrComponents/Footer";
 
-export default function AboutPage({ count }: { count: number }) {
+export default function AboutPage({
+  count,
+  darkMode,
+  setDarkMode,
+}: {
+  count: number;
+  darkMode: boolean;
+  setDarkMode: React.Dispatch<React.SetStateAction<boolean>>;
+}) {
   return (
-    <div className="bg-black h-auto min-h-screen">
-      <Navbar />
+    <div className={`${darkMode?"bg-black":"bg-slate-700"} h-auto min-h-screen`}>
+      <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
       <div className="pt-32">
         <div className="mt-12 flex flex-row justify-center items-center">
           <img
@@ -19,8 +27,8 @@ export default function AboutPage({ count }: { count: number }) {
         <About />
       </div>
       <CartComponent count={count} />
-      <div id="footer">
-        <Footer />
+      <div id="footer" className="mt-10">
+        <Footer darkMode={darkMode} />
       </div>
     </div>
   );

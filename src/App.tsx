@@ -10,7 +10,10 @@ import ShopPage from "./pages/ShopPage";
 import type { ProductCardType } from "./types/productCardType";
 
 function App() {
-  const [cartItems, setCartItems] = useState<{ product: ProductCardType; quantity: number }[]>([]);
+  const [darkMode, setDarkMode] = useState(true);
+  const [cartItems, setCartItems] = useState<
+    { product: ProductCardType; quantity: number }[]
+  >([]);
   // Always derive count from cartItems
   const count = cartItems.reduce((sum, item) => sum + item.quantity, 0);
 
@@ -26,6 +29,8 @@ function App() {
                 count={count}
                 cartItems={cartItems}
                 setCartItems={setCartItems}
+                darkMode={darkMode}
+                setDarkMode={setDarkMode}
               />
             }
           />
@@ -37,10 +42,21 @@ function App() {
                 cartItems={cartItems}
                 setCartItems={setCartItems}
                 count={count}
+                darkMode={darkMode}
+                setDarkMode={setDarkMode}
               />
             }
           />
-          <Route path="/AboutPage" element={<AboutPage count={count} />} />
+          <Route
+            path="/AboutPage"
+            element={
+              <AboutPage
+                count={count}
+                darkMode={darkMode}
+                setDarkMode={setDarkMode}
+              />
+            }
+          />
           <Route
             path="/CartPage"
             element={
@@ -48,6 +64,8 @@ function App() {
                 cartItems={cartItems}
                 setCartItems={setCartItems}
                 count={count}
+                darkMode={darkMode}
+                setDarkMode={setDarkMode}
               />
             }
           />

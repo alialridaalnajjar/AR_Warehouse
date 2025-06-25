@@ -6,9 +6,13 @@ import Footer from "../HrComponents/Footer";
 import type { ProductCardType } from "../types/productCardType";
 
 export default function CartPage({
+  darkMode,
+  setDarkMode,
   cartItems,
   setCartItems,
 }: {
+  darkMode: boolean;
+  setDarkMode: React.Dispatch<React.SetStateAction<boolean>>;
   cartItems: { product: ProductCardType; quantity: number }[];
   setCartItems: React.Dispatch<
     React.SetStateAction<{ product: ProductCardType; quantity: number }[]>
@@ -28,8 +32,12 @@ export default function CartPage({
   };
 
   return (
-    <div className="bg-black min-h-screen flex flex-col">
-      <Navbar />
+    <div
+      className={`${
+        darkMode ? "bg-black" : "bg-slate-700"
+      } min-h-screen flex flex-col`}
+    >
+      <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
       <div className="flex-1 flex flex-col">
         {cartItems.length !== 0 ? (
           <div className="pt-40 flex flex-wrap justify-center items-center flex-row gap-6">
@@ -125,7 +133,7 @@ export default function CartPage({
           <PurchasedSu />
         </div>
       )}
-      <Footer />
+      <Footer darkMode={darkMode} />
     </div>
   );
 }

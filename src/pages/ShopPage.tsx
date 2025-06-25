@@ -9,10 +9,13 @@ import type { ProductCardType } from "../types/productCardType";
 
 export default function ShopPage({
   ProductsBase,
-
+  setDarkMode,
+  darkMode,
   setCartItems,
   count,
 }: {
+  darkMode: boolean;
+  setDarkMode: React.Dispatch<React.SetStateAction<boolean>>;
   ProductsBase: ProductCardType[];
   cartItems: { product: ProductCardType; quantity: number }[];
   setCartItems: React.Dispatch<
@@ -39,8 +42,12 @@ export default function ShopPage({
 
   return (
     <>
-      <div className="bg-black h-auto min-h-screen">
-        <Navbar />
+      <div
+        className={`${
+          darkMode ? "bg-black" : "bg-slate-700"
+        } h-auto min-h-screen`}
+      >
+        <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
         <SearchBar
           search={search}
           setSearch={setSearch}
@@ -88,7 +95,7 @@ export default function ShopPage({
         {renderAddedToCart ? <AddedToCartSuccesfuly /> : null}
       </div>
       <div id="footer">
-        <Footer />
+        <Footer darkMode={darkMode} />
       </div>
       {selectedProduct && (
         <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-50">

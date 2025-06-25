@@ -1,44 +1,36 @@
-import { House, Menu, ShieldAlert, ShoppingBasket, Signature, User, X } from "lucide-react";
+import { House, Menu, ShieldAlert, ShoppingBasket, Signature, SunMoon, User, X } from "lucide-react";
 import React from "react";
 import { Link } from "react-router-dom";
-import img from "../assets/ARIMG.png";
-export default function Navbar() {
+
+export default function Navbar({darkMode, setDarkMode}: {darkMode: boolean; setDarkMode: React.Dispatch<React.SetStateAction<boolean>>}) {
   const [isNavClicked, setIsNavClicked] = React.useState(true);
-  const handleNavClick = () => {
-    if (isNavClicked) {
-      setIsNavClicked(false);
-    } else {
-      setIsNavClicked(true);
-    }
-  };
+  const handleNavClick = () => setIsNavClicked((prev) => !prev);
+
   return (
     <>
       {isNavClicked ? (
-        <div className="fixed w-full bg-black z-50 caret-transparent">
+        <div className={`fixed w-full z-50 caret-transparent ${darkMode ? "bg-black" : "bg-slate-700"}`}>
           <div className="flex flex-row items-center justify-between w-full p-7 gap-5 h-fit">
             <Link to="/MainPage">
-              <h1 className="text-violet-500 font-extrabold text-xl lg:text-3xl lg:ml-10 ">
+              <h1 className={`${darkMode ? "text-violet-500" : "text-purple-700"} font-extrabold text-xl lg:text-3xl lg:ml-10`}>
                 AR Warehouse
               </h1>
             </Link>
-            <Link to="/MainPage" className="ml-auto">
-           <img src={img} className="size-18 rounded-full lg:size-20 lg:mr-20 "/>
-           </Link>
+            <SunMoon
+              className={`size-6 lg:size-8 ${darkMode ? "text-violet-500" : "text-purple-700"} ml-auto mr-0.5`}
+              onClick={() => setDarkMode(!darkMode)}
+            />
             <Menu
-              className="size-10 text-violet-500 lg:size-12"
+              className={`size-10 ${darkMode ? "text-violet-500" : "text-purple-700"} lg:size-12`}
               onClick={handleNavClick}
             />
           </div>
-          <hr className="custom-hr rounded-4xl" style={{}} />
+          <hr className="custom-hr rounded-4xl" />
         </div>
       ) : (
-        <div className=" fixed inset-0 backdrop-blur-xs z-50 caret-transparent">
-          {/* OverLay taking whole screen and another div inside it !!*/}
-          <div
-    className="absolute z-10 right-0 w-40 h-fit flex flex-col items-end justify-end pt-2 gap-2 bg-black/30 shadow-lg shadow-violet-500/50 rounded-l-2xl p-1
-      animate-slide-in"
-  >
-            <X className="text-white mr-2 mt-2 " onClick={handleNavClick} />
+        <div className="fixed inset-0 backdrop-blur-xs z-50 caret-transparent">
+          <div className="absolute z-10 right-0 w-40 h-fit flex flex-col items-end justify-end pt-2 gap-2 bg-black/30 shadow-lg shadow-violet-500/50 rounded-l-2xl p-1 animate-slide-in">
+            <X className="text-white mr-2 mt-2" onClick={handleNavClick} />
             <Link to="/MainPage" className="w-full mr-2.5">
               <div className="flex-row items-center justify-start gap-6 flex w-full ml-2.5">
                 <House className=" size-7 text-violet-500" />
@@ -89,18 +81,9 @@ export default function Navbar() {
             50% { width: 25%; }
           }
           @keyframes slide-in {
-  from {
-    transform: translateX(100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-.animate-slide-in {
-  animation: slide-in 0.4s cubic-bezier(0.4,0,0.2,1) both;
-}
+            from { transform: translateX(100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+          }
         `}
       </style>
     </>
