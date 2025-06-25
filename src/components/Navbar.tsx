@@ -4,7 +4,13 @@ import { Link } from "react-router-dom";
 
 export default function Navbar({darkMode, setDarkMode}: {darkMode: boolean; setDarkMode: React.Dispatch<React.SetStateAction<boolean>>}) {
   const [isNavClicked, setIsNavClicked] = React.useState(true);
+  const [isAnimating, setIsAnimating] = React.useState(false);
   const handleNavClick = () => setIsNavClicked((prev) => !prev);
+
+  const handleSunMoonClick = () => {
+    setIsAnimating(true);
+    setDarkMode((prev) => !prev);
+  };
 
   return (
     <>
@@ -17,8 +23,9 @@ export default function Navbar({darkMode, setDarkMode}: {darkMode: boolean; setD
               </h1>
             </Link>
             <SunMoon
-              className={`size-6 lg:size-8 ${darkMode ? "text-violet-500" : "text-purple-700"} ml-auto mr-0.5`}
-              onClick={() => setDarkMode(!darkMode)}
+              className={`size-6 lg:size-8 ${darkMode ? "text-violet-500" : "text-purple-700"} ml-auto mr-0.5 ${isAnimating ? "sunmoon-animate" : ""}`}
+              onClick={handleSunMoonClick}
+              onAnimationEnd={() => setIsAnimating(false)}
             />
             <Menu
               className={`size-10 ${darkMode ? "text-violet-500" : "text-purple-700"} lg:size-12`}
@@ -28,8 +35,9 @@ export default function Navbar({darkMode, setDarkMode}: {darkMode: boolean; setD
           <hr className="custom-hr rounded-4xl" />
         </div>
       ) : (
-        <div className="fixed inset-0 backdrop-blur-xs z-50 caret-transparent">
-          <div className="absolute z-10 right-0 w-40 h-fit flex flex-col items-end justify-end pt-2 gap-2 bg-black/30 shadow-lg shadow-violet-500/50 rounded-l-2xl p-1 animate-slide-in">
+        <div className="fixed inset-0 z-50 caret-transparent">
+          {/* Sidebar */}
+          <div className="absolute z-10 right-0 w-40 h-fit flex flex-col items-end justify-end pt-2 gap-2 bg-black/30 shadow-lg shadow-violet-500/50 rounded-l-2xl p-1 animate-slide-in-right">
             <X className="text-white mr-2 mt-2" onClick={handleNavClick} />
             <Link to="/MainPage" className="w-full mr-2.5">
               <div className="flex-row items-center justify-start gap-6 flex w-full ml-2.5">
@@ -64,6 +72,8 @@ export default function Navbar({darkMode, setDarkMode}: {darkMode: boolean; setD
               </div>
             </Link>
           </div>
+          {/* Overlay */}
+          <div className="absolute inset-0 bg-black/40 animate-fade-in" onClick={handleNavClick}></div>
         </div>
       )}
       <style>
@@ -80,9 +90,26 @@ export default function Navbar({darkMode, setDarkMode}: {darkMode: boolean; setD
             0%, 100% { width: 100%; }
             50% { width: 25%; }
           }
-          @keyframes slide-in {
+          @keyframes slide-in-right {
             from { transform: translateX(100%); opacity: 0; }
             to { transform: translateX(0); opacity: 1; }
+          }
+          .animate-slide-in-right {
+            animation: slide-in-right 0.4s cubic-bezier(0.4,0,0.2,1) both;
+          }
+          @keyframes fade-in {
+            from { opacity: 0; }
+            to { opacity: 1; }
+          }
+          .animate-fade-in {
+            animation: fade-in 0.4s cubic-bezier(0.4,0,0.2,1) both;
+          }
+          @keyframes rotate-sunmoon {
+            from { transform: rotate(0deg);}
+            to { transform: rotate(360deg);}
+          }
+          .sunmoon-animate {
+            animation: rotate-sunmoon 0.5s cubic-bezier(0.4,0,0.2,1);
           }
         `}
       </style>
