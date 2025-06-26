@@ -15,65 +15,67 @@ export default function ShopCard({
   Gaming,
 }: ProductCardType) {
   return (
-    <div className="flex flex-col items-start gap-1.5 mx-auto ">
-      <div className="relative">
+    <div className="flex flex-col items-start gap-2 mx-auto p-2 lg:p-4 lg:max-w-md lg:w-[350px]">
+      <div className="relative w-full">
         {discount ? <Discounts /> : null}
         <div className="flex flex-col items-center justify-center relative">
-          <img src={img} className="object-cover rounded-2xl size-48 p-1" />
-          
+          <img
+            src={img}
+            className="object-cover rounded-2xl size-48 p-1 lg:size-[300px]"
+          />
         </div>
       </div>
-      <div className="flex flex-row gap-2.5 items-start justify-start ml-1 flex-wrap max-w-45">
-        <div className="bg-teal-800 text-green-400 rounded-2xl   p-1 text-xs font-bold ">
+      <div className="flex flex-row gap-2.5 items-start justify-start ml-1 flex-wrap max-w-45 lg:max-w-full">
+        <div className="bg-teal-800 text-green-400 rounded-2xl p-1 text-xs font-bold lg:text-base">
           ${price}
         </div>
         {Gaming ? (
-          <div className="bg-purple-800 text-violet-500/90 rounded-2xl   p-1 text-xs font-bold ">
+          <div className="bg-purple-800 text-violet-500/90 rounded-2xl p-1 text-xs font-bold lg:text-base">
             Gaming
           </div>
         ) : null}
         {discount ? (
-          <div className="bg-amber-700 text-amber-400 rounded-2xl   p-1 text-xs font-bold ">
+          <div className="bg-amber-700 text-amber-400 rounded-2xl p-1 text-xs font-bold lg:text-base">
             Discount
           </div>
         ) : null}
         {Tech ? (
-          <div className="bg-blue-800 text-blue-400 rounded-2xl   p-1 text-xs font-bold ">
+          <div className="bg-blue-800 text-blue-400 rounded-2xl p-1 text-xs font-bold lg:text-base">
             Tech
           </div>
-        ) : null}{" "}
+        ) : null}
         {PC ? (
-          <div className="bg-cyan-800 text-cyan-400 rounded-2xl   p-1 text-xs font-bold ">
+          <div className="bg-cyan-800 text-cyan-400 rounded-2xl p-1 text-xs font-bold lg:text-base">
             PC/Parts
           </div>
         ) : null}
         {Nitendo ? (
-          <div className="bg-blue-800 text-red-800 rounded-2xl   p-1 text-xs font-bold ">
+          <div className="bg-blue-800 text-red-800 rounded-2xl p-1 text-xs font-bold lg:text-base">
             Nitendo
           </div>
         ) : null}
         {Gfuel ? (
-          <div className="bg-teal-800 text-green-400 rounded-2xl   p-1 text-xs font-bold ">
+          <div className="bg-teal-800 text-green-400 rounded-2xl p-1 text-xs font-bold lg:text-base">
             Gfuel
           </div>
-        ) : null}{" "}
+        ) : null}
         {Ai ? (
-          <div className="bg-teal-800 text-green-400 rounded-2xl   p-1 text-xs font-bold ">
+          <div className="bg-teal-800 text-green-400 rounded-2xl p-1 text-xs font-bold lg:text-base">
             Ai
           </div>
         ) : null}
         {Xbox ? (
-          <div className="bg-teal-800 text-green-400 rounded-2xl   p-1 text-xs font-bold ">
+          <div className="bg-teal-800 text-green-400 rounded-2xl p-1 text-xs font-bold lg:text-base">
             Xbox
           </div>
         ) : null}
         {Playstation ? (
-          <div className="bg-teal-800 text-green-400 rounded-2xl   p-1 text-xs font-bold ">
+          <div className="bg-teal-800 text-green-400 rounded-2xl p-1 text-xs font-bold lg:text-base">
             Playstation
           </div>
         ) : null}
       </div>
-      <h1 className="text-md font-semibold text-white ml-1 max-w-45">
+      <h1 className="text-md font-semibold text-white ml-1 max-w-45 lg:text-2xl lg:max-w-full">
         {title}
       </h1>
       <div>{/*empty div for styling purposes ONLY */}</div>
