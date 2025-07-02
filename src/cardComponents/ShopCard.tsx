@@ -15,13 +15,13 @@ export default function ShopCard({
   Gaming,
 }: ProductCardType) {
   return (
-    <div className="flex flex-col items-start gap-2 mx-auto p-2 lg:p-4 lg:max-w-md lg:w-[350px]">
+    <div className="flex flex-col items-start gap-2 mx-auto p-2 lg:p-4 lg:max-w-md lg:w-[350px] max-w-43 ">
       <div className="relative w-full">
         {discount ? <Discounts /> : null}
         <div className="flex flex-col items-center justify-center relative">
           <img
             src={img}
-            className="object-cover rounded-2xl size-48 p-1 lg:size-[300px]"
+            className="object-cover rounded-2xl size-45  lg:size-[300px]"
           />
         </div>
       </div>
